@@ -9,17 +9,22 @@ const Hero = () => {
           <div>
             <h1 className="text-2xl md:text-5xl font-bold mb-2">Hi, I'm Abid Hasan</h1>
             <h1 className="text-primary text-4xl font-bold mb-8">Front-End Developer</h1>
-            <p className="text-gray-600 text-xl text-justify mb-8 leading-relaxed">
+            <p className="text-gray-600 md:text-xl text-md text-justify mb-8 leading-relaxed">
               I build modern, responsive web applications using the latest technologies. I love learning new things and creating meaningful, high-quality projects.
             </p>
-            <a
-              href="https://drive.google.com/file/d/1RAwGfNV3cIatN9rX5tduWK0WjuOh6Ce2/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              View My CV
-            </a>
+            <div>
+              <a
+                href="/Abid-Resume.pdf"
+                download='/Abid-Resume.pdf'
+                className="btn-primary mr-5"> Download My CV
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1RAwGfNV3cIatN9rX5tduWK0WjuOh6Ce2/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"> View My CV
+              </a>
+            </div>
 
           </div>
 

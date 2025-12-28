@@ -29,8 +29,8 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="section-padding bg-gray-50">
       <div className="container-custom">
-        <p className="text-center text-gray-600 mb-4 uppercase tracking-wide">My Portfolio</p>
-        <h2 className="section-title">VISIT MY PORTFOLIO</h2>
+        <p className="text-center text-primary mb-4 uppercase tracking-wide">My Portfolio</p>
+        <h2 className="section-title">VISIT MY PROJECTS</h2>
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

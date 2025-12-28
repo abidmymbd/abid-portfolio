@@ -39,7 +39,7 @@ const About = () => {
 
           {/* Right Content */}
           <div>
-            <p className="text-gray-600 mb-6 text-xl text-justify">
+            <p className="text-gray-600 mb-6 md:text-xl text-md text-justify">
               I’m a junior MERN stack developer who enjoys building responsive, modern, and interactive web applications. I work mainly with React, Tailwind CSS, and other modern web technologies to create clean and user-friendly interfaces. I’m passionate about learning, improving my skills, and delivering practical solutions for real-world web projects.
             </p>
 

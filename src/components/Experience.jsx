@@ -41,7 +41,7 @@ const Experience = () => {
 
   const workExperience = [
     {
-      position: "Front-end Developer",
+      position: "Complete Web Development Course",
       company: "Programming Hero - (2025 - 2026)",
       description: "Completed a comprehensive Web Development course from Programming Hero, covering modern frontend and backend technologies.",
     },
@@ -55,42 +55,89 @@ const Experience = () => {
   return (
     <section id="experience" className="section-padding bg-gray-50">
       <div className="container-custom">
-        <p className="text-center text-primary mb-10 uppercase tracking-wide">My Resume</p>
+        <p className="text-center text-primary mb-10 uppercase tracking-wide">
+          My Resume
+        </p>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Education */}
-          <div>
-            <div className="flex items-center mb-6">
-              <FaGraduationCap className="text-3xl text-primary mr-3" />
-              <h3 className="text-2xl font-bold">Education</h3>
+        {/* Main Grid */}
+        <div className="grid lg:grid-cols-2 gap-8">
+
+          {/* LEFT COLUMN */}
+          <div className="md:space-y-20 space-y-10">
+
+            {/* Education */}
+            <div>
+              <div className="flex items-center mb-6">
+                <FaGraduationCap className="text-3xl text-primary mr-3" />
+                <h3 className="text-2xl font-bold">Education</h3>
+              </div>
+
+              <div className="space-y-6">
+                {education.map((edu, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 className="font-semibold text-lg mb-2">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-primary text-sm">
+                      {edu.institution}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="space-y-6">
-              {education.map((edu, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-lg mb-2">{edu.degree}</h4>
-                  <p className="text-primary text-sm mb-2">{edu.institution}</p>
-                  <p className="text-gray-600 text-sm">{edu.description}</p>
-                </div>
-              ))}
+
+            {/* Professional Courses */}
+            <div>
+              <div className="flex items-center mb-6">
+                <FaBriefcase className="text-3xl text-primary mr-3" />
+                <h3 className="text-2xl font-bold">
+                  Professional Courses
+                </h3>
+              </div>
+
+              <div className="space-y-6">
+                {workExperience.map((exp, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 className="font-semibold text-lg mb-2">
+                      {exp.position}
+                    </h4>
+                    <p className="text-primary text-sm mb-2">
+                      {exp.company}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {exp.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Software Skills */}
+          {/* RIGHT COLUMN - SKILLS */}
           <div>
             <div className="flex items-center mb-6">
               <FaLaptopCode className="text-3xl text-primary mr-3" />
               <h3 className="text-2xl font-bold">Software Skills</h3>
             </div>
+
             <div className="space-y-6">
               {skills.map((skillGroup, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-lg mb-4">{skillGroup.category}</h4>
+                  <h4 className="font-semibold text-lg mb-4">
+                    {skillGroup.category}
+                  </h4>
+
                   {skillGroup.items.map((skill, idx) => (
                     <div key={idx} className="mb-4">
                       <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-primary">{skill.percentage}%</span>
+                        <span className="text-sm font-medium">
+                          {skill.name}
+                        </span>
+                        <span className="text-sm text-primary">
+                          {skill.percentage}%
+                        </span>
                       </div>
+
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
                           className="bg-primary h-2 rounded-full transition-all duration-500"
@@ -104,25 +151,10 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Experience */}
-          <div>
-            <div className="flex items-center mb-6">
-              <FaBriefcase className="text-3xl text-primary mr-3" />
-              <h3 className="text-2xl font-bold">Professional Courses</h3>
-            </div>
-            <div className="space-y-6">
-              {workExperience.map((exp, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-lg mb-2">{exp.position}</h4>
-                  <p className="text-primary text-sm mb-2">{exp.company}</p>
-                  <p className="text-gray-600 text-sm">{exp.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
+
   )
 }
 
